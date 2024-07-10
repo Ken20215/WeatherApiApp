@@ -111,6 +111,7 @@
 				EDF8CFB82C3D10FF00D9FE21 /* Frameworks */,
 				EDF8CFB92C3D10FF00D9FE21 /* Resources */,
 				2695BE4816AA83F3892F1DB8 /* [CP] Embed Pods Frameworks */,
+				ED3753442C3E7CEF00D4080E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -206,6 +207,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeatherApiApp/Pods-WeatherApiApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		ED3753442C3E7CEF00D4080E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\n  swiftlint autocorrect --format # 自動修正の有効化\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

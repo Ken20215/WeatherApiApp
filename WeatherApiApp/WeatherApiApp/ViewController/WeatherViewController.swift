@@ -12,11 +12,11 @@ import SwiftyJSON
 
 class WeatherViewController: UIViewController {
     
-    @IBOutlet var max: UILabel!
-    @IBOutlet var min: UILabel!
-    @IBOutlet var taikan: UILabel!
-    @IBOutlet var humidity: UILabel!
-    @IBOutlet var wind: UILabel!
+    @IBOutlet private var max: UILabel!
+    @IBOutlet private var min: UILabel!
+    @IBOutlet private var taikan: UILabel!
+    @IBOutlet private var humidity: UILabel!
+    @IBOutlet private var wind: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class WeatherViewController: UIViewController {
 }
 
 extension WeatherViewController {
-    private func getWeatherData(zip: String,country: String) {
+    private func getWeatherData(zip: String, country: String) {
         let API_KEY = "4427c745cb0f68ef58840352e8f43ab2"
         let urlString = "http://api.openweathermap.org/data/2.5/weather?zip=\(zip),\(country)&units=metric&appid=\(API_KEY)"
         guard let encodedUrlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
