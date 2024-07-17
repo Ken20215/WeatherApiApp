@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 import CoreLocation
 
-class WeatherViewController: UIViewController {
+final class WeatherViewController: UIViewController {
     
     // MARK: - Properties
     @IBOutlet private var max: UILabel!
