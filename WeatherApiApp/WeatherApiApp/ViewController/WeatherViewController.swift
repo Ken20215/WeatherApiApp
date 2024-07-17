@@ -9,19 +9,20 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-import CoreLocation // 位置情報を取得するために必要なモジュールをインポートする。
+import CoreLocation
 
 class WeatherViewController: UIViewController {
     
+    // MARK: - Properties
     @IBOutlet private var max: UILabel!
     @IBOutlet private var min: UILabel!
     @IBOutlet private var taikan: UILabel!
     @IBOutlet private var humidity: UILabel!
     @IBOutlet private var wind: UILabel!
     private var currentLocation: CLLocation?
-    // 位置情報を取得するために必要なプロトコルを付与する。
     let locationManager = CLLocationManager()
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.locationManager.delegate = self // CLLocationManagerDelegateプロトコルを使用するためにdelegateをViewControllerクラスに設定する。
@@ -36,8 +37,7 @@ class WeatherViewController: UIViewController {
 extension WeatherViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let loc = locations.last else { return }
-        currentLocation = loc
-        getWeatherData(latitude: String(currentLocation?.coordinate.latitude ?? 0), longitude: String(currentLocation?.coordinate.longitude ?? 0))
+        getWeatherData(latitude: String(loc.coordinate.latitude), longitude: String(loc.coordinate.longitude))
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
