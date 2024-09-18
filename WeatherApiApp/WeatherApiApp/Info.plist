@@ -10,11 +10,11 @@
 		<dict>
 			<key>ibsnet.co.jp</key>
 			<dict>
-				<key>NSTemporaryExceptionRequiresForwardSecrecy</key>
+				<key>NSIncludesSubdomains</key>
 				<true/>
 				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
-				<key>NSIncludesSubdomains</key>
+				<key>NSTemporaryExceptionRequiresForwardSecrecy</key>
 				<true/>
 			</dict>
 		</dict>
@@ -36,5 +36,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
 </dict>
 </plist>

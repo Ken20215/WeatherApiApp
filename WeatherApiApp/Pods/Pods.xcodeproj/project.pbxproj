@@ -16,7 +16,7 @@
 		36C78069A72BECAEB66B31FF794A09ED /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDCFF65F6B3BEA62D094F0DF0AFBEFC /* Request.swift */; };
 		3B901DF82C6576019330391D0F470B31 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3D57353834825F7B52B816066B7789 /* CFNetwork.framework */; };
 		4337931D8B8E3F3BA03C77C1B496BEAD /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E503B763A9AA14EBBC0AB0636D8D39A /* HTTPMethod.swift */; };
-		4F4B9DFA352D9958C7494D7BC24631D8 /* Alamofire-Alamofire in Resources */ = {isa = PBXBuildFile; fileRef = 085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire-Alamofire */; };
+		4F4B9DFA352D9958C7494D7BC24631D8 /* Alamofire.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire.bundle */; };
 		5075DC82A63A9807DFC390B4CE8046CD /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10A0E84421233C817D511AD4226EE66 /* Session.swift */; };
 		571142A2747CD90165F631A8AE980A0A /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FC5F74B8CF639791CCB01679712AAD8 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5830C6260CA2B7CD6DC74054FB29CDD1 /* DownloadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1DAD9A356253C88A2E1451C2FF869 /* DownloadRequest.swift */; };
@@ -92,7 +92,7 @@
 		00C20BADAF5F34A25D38FCDE77CEF899 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Core/Response.swift; sourceTree = "<group>"; };
 		031846555B7BF0C6FB8E862767699629 /* ResourceBundle-Alamofire-Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Alamofire-Alamofire-Info.plist"; sourceTree = "<group>"; };
 		03203B08C0463B18143BF35969F8C820 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/Features/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire-Alamofire */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Alamofire-Alamofire"; path = Alamofire.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Alamofire.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E503B763A9AA14EBBC0AB0636D8D39A /* HTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = Source/Core/HTTPMethod.swift; sourceTree = "<group>"; };
 		0F9F38941F6A4E67078EF0172ADEB9F2 /* DataRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataRequest.swift; path = Source/Core/DataRequest.swift; sourceTree = "<group>"; };
 		143A0948AAF41F25AF64F954B3F6FDA6 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Core/Notifications.swift; sourceTree = "<group>"; };
@@ -223,7 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
-				085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire-Alamofire */,
+				085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire.bundle */,
 				8EACA3DAA88762E9EF4EAB46791861C1 /* Pods-WeatherApiApp */,
 				E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */,
 			);
@@ -438,7 +438,7 @@
 			);
 			name = "Alamofire-Alamofire";
 			productName = Alamofire;
-			productReference = 085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire-Alamofire */;
+			productReference = 085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */ = {
@@ -520,7 +520,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F4B9DFA352D9958C7494D7BC24631D8 /* Alamofire-Alamofire in Resources */,
+				4F4B9DFA352D9958C7494D7BC24631D8 /* Alamofire.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,7 +683,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Alamofire";
 				IBSC_MODULE = Alamofire;
 				INFOPLIST_FILE = "Target Support Files/Alamofire/ResourceBundle-Alamofire-Alamofire-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.3;
 				PRODUCT_NAME = Alamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -839,7 +839,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Alamofire";
 				IBSC_MODULE = Alamofire;
 				INFOPLIST_FILE = "Target Support Files/Alamofire/ResourceBundle-Alamofire-Alamofire-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.3;
 				PRODUCT_NAME = Alamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
